@@ -1,15 +1,24 @@
 import React from 'react';
 import './App.css';
-import { ProductCard } from './features/products/ProductCard';
+import { CartInfo } from './features/cart/CartInfo';
+import { ProductsWrapper } from './features/products/ProductsWrapper';
 
 function App() {
   return (
     <div className="App">
+      <nav className="navbar navbar-light bg-light justify-content-between mb-5">
+        <div className="container">
+          <a href="/" className="navbar-brand">ProductsShop</a>
+          <CartInfo />
+        </div> 
+      </nav>
+
       <header className="App-header">
-        <ProductCard name="Call of Duty" description="First Person Shooter" price={99.99} />
-        <ProductCard name="FIFA 2022" description="Football game" price={139.99} />
-        <ProductCard name="Counter Strike" description="First Person Shooter" price={129.99} />
+        
       </header>
+      <main>
+        <ProductsWrapper />
+      </main>
     </div>
   );
 }
